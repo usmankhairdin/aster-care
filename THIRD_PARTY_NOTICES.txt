@@ -1,0 +1,37 @@
+ASTER CARE — THIRD-PARTY NOTICES
+
+Newsreader
+Official source: https://github.com/google/fonts/tree/main/ofl/newsreader
+SIL Open Font License 1.1; full copyright/license: licenses/newsreader-OFL.txt
+Unmodified variable TTF supplied locally.
+
+DM Sans
+Official source: https://github.com/google/fonts/tree/main/ofl/dmsans
+SIL Open Font License 1.1; full copyright/license: licenses/dm-sans-OFL.txt
+Unmodified variable TTF supplied locally.
+
+Lenis 1.3.27
+https://github.com/darkroomengineering/lenis
+Unmodified browser distribution; MIT notice: licenses/Lenis-MIT.txt.
+
+Shared interaction mechanics
+Scroll/scrollbar, menu/focus, measured FAQ and dialog behavior adapt the
+studio's Taskline Lite and Nookwell implementation. Retained notices:
+licenses/Taskline-MIT.txt and licenses/Nookwell-MIT.txt. The Taskline notice
+includes upstream Themesberg attribution. No Taskline board, Tailwind CSS,
+Nookwell layout/listings/identity or sibling medical site source is used.
+
+Photography
+Illustrative consultation photographs by Vitaly Gariev on Unsplash.
+Exact photo pages, downloaded sources and filenames:
+licenses/photo-sources.json
+License: https://unsplash.com/license
+Photos may be incorporated into personal/commercial design. Do not sell
+them as standalone stock or compile a competing photo service. The MIT code
+license does not relicense the photos or grant likeness/trademark releases.
+No photographed person is represented as Aster Care staff or a patient of
+this fictional practice; no endorsement by the models is claimed.
+
+Original assets
+Aster identity, line icons and decorative line illustrations are original
+SVG artwork created for this template. No external icon/font API runtime.

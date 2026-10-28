@@ -1,0 +1,742 @@
+<!doctype html>
+<html lang="en" id="page-scroll">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#244fa1" />
+    <title>Aster Care — A little time. A lot more care.</title>
+    <meta
+      name="description"
+      content="Aster Care is a free family-clinic HTML template: thoughtful everyday care, a clear first-visit guide and an honest local visit-request demo."
+    />
+    <link rel="icon" href="assets/img/aster-mark.svg" type="image/svg+xml" />
+    <link
+      rel="preload"
+      href="assets/fonts/newsreader.ttf"
+      as="font"
+      type="font/ttf"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="assets/fonts/dm-sans.ttf"
+      as="font"
+      type="font/ttf"
+      crossorigin
+    />
+    <link rel="stylesheet" href="assets/css/lenis.css?v=2f668ae84a" />
+    <link rel="stylesheet" href="assets/css/aster.css?v=7a124ac3f8" />
+    <script src="assets/js/lenis-1.3.27.min.js" defer></script>
+    <script src="assets/js/aster.js" defer></script>
+  </head>
+  <body>
+    <svg
+      class="svg-library"
+      xmlns="http://www.w3.org/2000/svg"
+      aria-hidden="true"
+    >
+      <defs>
+        <symbol id="arrow" viewBox="0 0 24 24">
+          <path d="M4 12h15m-6-6 6 6-6 6" />
+        </symbol>
+        <symbol id="diagonal" viewBox="0 0 24 24">
+          <path d="M6 18 18 6M6 6h12v12" />
+        </symbol>
+        <symbol id="chevron" viewBox="0 0 24 24">
+          <path d="m6 9 6 6 6-6" />
+        </symbol>
+        <symbol id="close" viewBox="0 0 24 24">
+          <path d="m6 6 12 12M18 6 6 18" />
+        </symbol>
+        <symbol id="aster" viewBox="0 0 64 64">
+          <g fill="currentColor" stroke="none">
+            <rect x="27" y="3" width="10" height="58" rx="5" />
+            <rect x="3" y="27" width="58" height="10" rx="5" />
+            <rect
+              x="27"
+              y="3"
+              width="10"
+              height="58"
+              rx="5"
+              transform="rotate(45 32 32)"
+            />
+            <rect
+              x="27"
+              y="3"
+              width="10"
+              height="58"
+              rx="5"
+              transform="rotate(-45 32 32)"
+            />
+          </g>
+        </symbol>
+        <symbol id="heart" viewBox="0 0 32 32">
+          <path
+            d="M27 8c-4-4-9-1-11 3C14 7 9 4 5 8c-6 7 11 19 11 19S33 15 27 8Z"
+          />
+          <path d="M7 16h5l2-4 3 9 2-5h6" />
+        </symbol>
+        <symbol id="people" viewBox="0 0 32 32">
+          <circle cx="12" cy="10" r="5" />
+          <path
+            d="M3 28v-3a9 9 0 0 1 18 0v3M21 5a5 5 0 0 1 0 10m3 4a8 8 0 0 1 5 7v2"
+          />
+        </symbol>
+        <symbol id="leaf" viewBox="0 0 32 32">
+          <path
+            d="M6 25C1 8 15 5 27 5c0 12-4 25-21 20Zm0 2L23 10m-10 9v-8m0 8h9"
+          />
+        </symbol>
+        <symbol id="clock" viewBox="0 0 32 32">
+          <circle cx="16" cy="16" r="12" />
+          <path d="M16 8v9l6 3" />
+        </symbol>
+        <symbol id="pin" viewBox="0 0 32 32">
+          <path d="M26 13c0 8-10 16-10 16S6 21 6 13a10 10 0 1 1 20 0Z" />
+          <circle cx="16" cy="13" r="3" />
+        </symbol>
+        <symbol id="calendar" viewBox="0 0 32 32">
+          <rect x="4" y="6" width="24" height="23" rx="5" />
+          <path d="M4 13h24M11 3v6m10-6v6M10 19h3m6 0h3m-12 5h3" />
+        </symbol>
+        <symbol id="message" viewBox="0 0 32 32">
+          <path
+            d="M7 4h18a4 4 0 0 1 4 4v13a4 4 0 0 1-4 4H14l-9 5V8a4 4 0 0 1 2-4Z"
+          />
+          <path d="M11 11h12m-12 6h8" />
+        </symbol>
+      </defs>
+    </svg>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header" id="site-header">
+      <div class="wrap header-inner">
+        <a class="brand" href="#top" aria-label="Aster Care home"
+          ><svg><use href="#aster" /></svg
+          ><span>aster<span class="brand-care">care</span></span></a
+        >
+        <nav class="primary-nav" aria-label="Main navigation">
+          <a href="#care">Your care</a
+          ><a href="#first-visit">Your first visit</a>
+        </nav>
+        <div class="header-actions">
+          <a class="practice-link" href="#practice">The practice</a
+          ><a class="button button-small" href="#request" data-request
+            >Plan a visit <svg class="arrow"><use href="#arrow" /></svg></a
+          ><button
+            class="menu-toggle"
+            id="menu-toggle"
+            type="button"
+            hidden
+            aria-controls="mobile-menu"
+            aria-expanded="false"
+            aria-label="Open navigation"
+          >
+            <span class="menu-petal"></span><span class="menu-petal"></span
+            ><span class="menu-petal"></span>
+          </button>
+        </div>
+      </div>
+    </header>
+    <div
+      class="mobile-menu"
+      id="mobile-menu"
+      hidden
+      role="dialog"
+      aria-modal="true"
+      aria-label="Navigation"
+    >
+      <div class="menu-scroll" id="menu-scroll">
+        <div class="menu-content wrap">
+          <p>A little time. A lot more care.</p>
+          <nav aria-label="Mobile navigation">
+            <a href="#care"
+              >Your care <svg class="arrow"><use href="#arrow" /></svg></a
+            ><a href="#our-way"
+              >Our way <svg class="arrow"><use href="#arrow" /></svg></a
+            ><a href="#first-visit"
+              >Your first visit
+              <svg class="arrow"><use href="#arrow" /></svg></a
+            ><a href="#practice"
+              >The practice <svg class="arrow"><use href="#arrow" /></svg></a
+            ><a href="#faq"
+              >Good to know <svg class="arrow"><use href="#arrow" /></svg></a
+            ><a href="#request"
+              >Plan a visit <svg class="arrow"><use href="#arrow" /></svg
+            ></a>
+          </nav>
+          <div class="menu-bottom">
+            <svg><use href="#aster" /></svg
+            ><span>Everyday care.<br />A more human approach.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <main id="main">
+      <section class="hero" id="top" aria-labelledby="hero-title">
+        <div class="wrap hero-layout">
+          <div class="hero-copy">
+            <p class="hero-label">
+              <span></span> A family practice with you in mind
+            </p>
+            <h1 id="hero-title">A little time.<br />A lot more care.</h1>
+            <p>
+              For the everyday questions, the next chapter, and the person
+              behind the appointment.
+            </p>
+            <div class="hero-actions">
+              <a href="#request" class="button button-citron" data-request
+                >Let's plan your visit
+                <svg class="arrow"><use href="#arrow" /></svg></a
+              ><a href="#care" class="text-action"
+                >Explore your care <svg class="arrow"><use href="#arrow" /></svg
+              ></a>
+            </div>
+            <div class="hero-footnote">
+              <svg><use href="#message" /></svg
+              ><span>Space to talk.<br />Time to feel heard.</span>
+            </div>
+          </div>
+          <figure class="hero-portrait">
+            <div class="portrait-frame">
+              <img
+                src="assets/img/care.webp"
+                width="1200"
+                height="675"
+                alt="A doctor listening to a patient during a consultation; illustrative stock photograph"
+                fetchpriority="high"
+              />
+            </div>
+            <span class="portrait-flower" aria-hidden="true"
+              ><svg><use href="#aster" /></svg
+            ></span>
+            <figcaption>Care begins<br />with listening.</figcaption>
+          </figure>
+        </div>
+      </section>
+      <div class="quick-care wrap" aria-label="Explore care options">
+        <a href="#everyday"
+          ><svg class="care-icon"><use href="#heart" /></svg
+          ><span>Everyday care<small>A familiar place to start.</small></span
+          ><svg class="arrow"><use href="#diagonal" /></svg></a
+        ><a href="#family"
+          ><svg class="care-icon"><use href="#people" /></svg
+          ><span
+            >Care for your family<small
+              >Through life's different stages.</small
+            ></span
+          ><svg class="arrow"><use href="#diagonal" /></svg></a
+        ><a href="#wellbeing"
+          ><svg class="care-icon"><use href="#leaf" /></svg
+          ><span>Looking ahead<small>Make room for wellbeing.</small></span
+          ><svg class="arrow"><use href="#diagonal" /></svg
+        ></a>
+      </div>
+      <section
+        class="care-section section wrap"
+        id="care"
+        aria-labelledby="care-title"
+      >
+        <div class="care-intro">
+          <p class="section-note">Here for the everyday</p>
+          <h2 id="care-title">Good care starts<br />with knowing you.</h2>
+          <p>
+            One place for the little questions and the bigger conversations.
+            Start with what brings you here.
+          </p>
+          <div class="care-drawing" aria-hidden="true">
+            <svg viewBox="0 0 260 230">
+              <path d="M45 110h49l17-43 32 94 20-51h52" />
+              <circle cx="130" cy="117" r="91" />
+              <path d="M52 35 33 16m175 19 19-19M130 7V0" />
+            </svg>
+          </div>
+        </div>
+        <div class="care-list">
+          <details class="faq-item service-item" id="everyday" open>
+            <summary>
+              <span class="service-title"
+                ><svg><use href="#heart" /></svg>Everyday health</span
+              ><svg class="faq-icon"><use href="#chevron" /></svg>
+            </summary>
+            <div class="faq-answer">
+              <p>
+                A thoughtful starting point for general health conversations,
+                routine appointments and ongoing primary care.
+              </p>
+              <ul>
+                <li>General consultations</li>
+                <li>Ongoing care conversations</li>
+                <li>Follow-up appointments</li>
+              </ul>
+              <a
+                class="text-action"
+                href="#request"
+                data-request="Everyday health"
+                >Ask about everyday care
+                <svg class="arrow"><use href="#arrow" /></svg
+              ></a>
+            </div>
+          </details>
+          <details class="faq-item service-item" id="family">
+            <summary>
+              <span class="service-title"
+                ><svg><use href="#people" /></svg>Family &amp; life stages</span
+              ><svg class="faq-icon"><use href="#chevron" /></svg>
+            </summary>
+            <div class="faq-answer">
+              <p>
+                Care that makes space for different ages, changing routines and
+                the people who matter to you.
+              </p>
+              <ul>
+                <li>Family appointments</li>
+                <li>New-patient introductions</li>
+                <li>Care coordination conversations</li>
+              </ul>
+              <a class="text-action" href="#request" data-request="Family care"
+                >Ask about family care
+                <svg class="arrow"><use href="#arrow" /></svg
+              ></a>
+            </div>
+          </details>
+          <details class="faq-item service-item" id="wellbeing">
+            <summary>
+              <span class="service-title"
+                ><svg><use href="#leaf" /></svg>Check-ins &amp; wellbeing</span
+              ><svg class="faq-icon"><use href="#chevron" /></svg>
+            </summary>
+            <div class="faq-answer">
+              <p>
+                A chance to pause, ask questions and discuss the next step in
+                your care with a qualified professional.
+              </p>
+              <ul>
+                <li>Routine check-in visits</li>
+                <li>Preventive-care conversations</li>
+                <li>Personal wellbeing discussions</li>
+              </ul>
+              <a
+                class="text-action"
+                href="#request"
+                data-request="Routine check-in"
+                >Ask about a check-in
+                <svg class="arrow"><use href="#arrow" /></svg
+              ></a>
+            </div>
+          </details>
+          <p class="service-disclaimer">
+            Sample services for a fictional practice. This template provides no
+            clinical advice.
+          </p>
+        </div>
+      </section>
+      <section class="our-way" id="our-way" aria-labelledby="our-way-title">
+        <div class="wrap way-layout">
+          <figure class="way-photo">
+            <img
+              src="assets/img/consultation.webp"
+              width="1200"
+              height="675"
+              alt="A clinician having a friendly conversation with a patient; illustrative stock photograph"
+              loading="lazy"
+            />
+            <figcaption>Room to talk.<br />Time to listen.</figcaption>
+          </figure>
+          <div class="way-copy">
+            <p class="section-note">A more human kind of practice</p>
+            <h2 id="our-way-title">You're a person.<br />Not a time slot.</h2>
+            <p>
+              Being comfortable enough to ask the next question can make all the
+              difference. We believe the experience of care deserves care, too.
+            </p>
+            <div class="way-values">
+              <div>
+                <span class="value-mark" aria-hidden="true">+</span>
+                <div>
+                  <h3>Listen first.</h3>
+                  <p>
+                    Make space for your story, not just the reason for your
+                    visit.
+                  </p>
+                </div>
+              </div>
+              <div>
+                <span class="value-mark" aria-hidden="true">+</span>
+                <div>
+                  <h3>Keep it clear.</h3>
+                  <p>
+                    Plain words, thoughtful conversations and a next step you
+                    understand.
+                  </p>
+                </div>
+              </div>
+              <div>
+                <span class="value-mark" aria-hidden="true">+</span>
+                <div>
+                  <h3>Stay connected.</h3>
+                  <p>
+                    A familiar practice to return to, through life's changes.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section
+        class="first-visit section wrap"
+        id="first-visit"
+        aria-labelledby="visit-title"
+      >
+        <div class="center-heading">
+          <p class="section-note">A comfortable first step</p>
+          <h2 id="visit-title">Less guesswork.<br />A better beginning.</h2>
+          <p>Here's what the start of a care conversation can look like.</p>
+        </div>
+        <ol class="visit-steps">
+          <li>
+            <div class="step-head">
+              <span>1</span><svg><use href="#message" /></svg>
+            </div>
+            <h3>Start with hello.</h3>
+            <p>
+              Share your contact details and the kind of visit you're interested
+              in. Keep medical information for your clinician.
+            </p>
+          </li>
+          <li>
+            <div class="step-head">
+              <span>2</span><svg><use href="#calendar" /></svg>
+            </div>
+            <h3>Find a time together.</h3>
+            <p>
+              A real practice confirms the right appointment, availability and
+              anything to bring before your visit.
+            </p>
+          </li>
+          <li>
+            <div class="step-head">
+              <span>3</span><svg><use href="#heart" /></svg>
+            </div>
+            <h3>Come as you are.</h3>
+            <p>
+              Bring your questions. The first conversation is a chance to get to
+              know each other and talk about what comes next.
+            </p>
+          </li>
+        </ol>
+      </section>
+      <section
+        class="practice-section"
+        id="practice"
+        aria-labelledby="practice-title"
+      >
+        <div class="wrap practice-panel">
+          <div class="practice-heading">
+            <p class="section-note">Your neighborhood practice</p>
+            <h2 id="practice-title">A place to<br />feel at ease.</h2>
+            <p>
+              Clear details before you arrive.<br />A familiar welcome when you
+              do.
+            </p>
+            <p class="sample-note">Illustrative practice information</p>
+          </div>
+          <div class="practice-details">
+            <div class="practice-address">
+              <svg><use href="#pin" /></svg>
+              <div>
+                <h3>Find Aster Care</h3>
+                <p>24 Linden Road<br />Your City, 10001</p>
+                <a class="text-action" href="#request" data-request
+                  >Ask about visiting
+                  <svg class="arrow"><use href="#arrow" /></svg
+                ></a>
+              </div>
+            </div>
+            <div class="practice-hours">
+              <div class="hours-title">
+                <svg><use href="#clock" /></svg>
+                <h3>Practice hours</h3>
+              </div>
+              <dl>
+                <div>
+                  <dt>Monday — Thursday</dt>
+                  <dd>8:30 am — 5:30 pm</dd>
+                </div>
+                <div>
+                  <dt>Friday</dt>
+                  <dd>8:30 am — 4:00 pm</dd>
+                </div>
+                <div>
+                  <dt>Saturday — Sunday</dt>
+                  <dd>Closed</dd>
+                </div>
+              </dl>
+              <p>Sample hours only; no live availability.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section
+        class="faq-section section wrap"
+        id="faq"
+        aria-labelledby="faq-title"
+      >
+        <div class="center-heading">
+          <p class="section-note">Good to know</p>
+          <h2 id="faq-title">A few answers,<br />before you ask.</h2>
+        </div>
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary>
+              How do I get started?<svg class="faq-icon">
+                <use href="#chevron" />
+              </svg>
+            </summary>
+            <div class="faq-answer">
+              <p>
+                Choose Plan a visit to prepare a short contact request. This
+                static template creates a draft for you to review; it does not
+                send it or make an appointment.
+              </p>
+            </div>
+          </details>
+          <details class="faq-item">
+            <summary>
+              Can I choose a time for my visit?<svg class="faq-icon">
+                <use href="#chevron" />
+              </svg>
+            </summary>
+            <div class="faq-answer">
+              <p>
+                You can include a morning or afternoon contact preference. It is
+                only a preference, not an available appointment slot. A real
+                practice would confirm dates and times directly.
+              </p>
+            </div>
+          </details>
+          <details class="faq-item">
+            <summary>
+              What should I include in my request?<svg class="faq-icon">
+                <use href="#chevron" />
+              </svg>
+            </summary>
+            <div class="faq-answer">
+              <p>
+                Only your name, email and general visit preference. Please don't
+                enter symptoms, medical records or other sensitive health
+                information. There is no secure patient portal in this demo.
+              </p>
+            </div>
+          </details>
+          <details class="faq-item">
+            <summary>
+              Is Aster Care a real medical practice?<svg class="faq-icon">
+                <use href="#chevron" />
+              </svg>
+            </summary>
+            <div class="faq-answer">
+              <p>
+                No. Aster Care is a fictional demonstration identity for this
+                free HTML template. The people in the stock photographs are not
+                presented as its staff or patients. Services, hours and location
+                are examples, not real medical services.
+              </p>
+            </div>
+          </details>
+        </div>
+      </section>
+      <section
+        class="request-section"
+        id="request"
+        aria-labelledby="request-title"
+      >
+        <div class="wrap request-content">
+          <svg class="request-flower" aria-hidden="true">
+            <use href="#aster" />
+          </svg>
+          <p class="section-note">A little time for you</p>
+          <h2 id="request-title">Let's start<br />with a conversation.</h2>
+          <p>Your next step doesn't have to be a big one.</p>
+          <a class="button button-citron" href="#request" data-request
+            >Prepare a visit request
+            <svg class="arrow"><use href="#arrow" /></svg
+          ></a>
+          <p class="request-disclaimer">
+            Local template demo. No appointment is booked or request sent.
+          </p>
+          <p id="request-fallback" class="request-disclaimer" hidden>
+            Your browser cannot open the visit-draft form. You can still explore
+            all care information and the contact setup instructions in
+            README.txt.
+          </p>
+          <noscript
+            ><p>
+              JavaScript is needed for the draft dialog. You can explore all
+              care information and contact instructions in README.txt without
+              it.
+            </p></noscript
+          >
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer" id="site-footer">
+      <div class="wrap">
+        <div class="footer-top">
+          <a href="#top" class="brand" aria-label="Aster Care back to top"
+            ><svg><use href="#aster" /></svg
+            ><span>aster<span class="brand-care">care</span></span></a
+          >
+          <nav aria-label="Footer navigation">
+            <a href="#care">Your care</a><a href="#our-way">Our way</a
+            ><a href="#practice">The practice</a><a href="#faq">Good to know</a
+            ><a href="LICENSE">Template license</a>
+          </nav>
+          <a class="back-top" href="#top" aria-label="Back to top"
+            ><svg class="arrow"><use href="#arrow" /></svg
+          ></a>
+        </div>
+        <p class="footer-note">
+          A fictional family practice. Illustrative services and stock
+          photography. No medical advice or real bookings.
+        </p>
+        <div class="footer-meta">
+          <span>© 2026 Aster Care. Free HTML template.</span
+          ><span
+            >Designed &amp; developed by
+            <a
+              href="https://www.usmankhairdin.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><strong>Usman Khair Din</strong></a
+            ></span
+          >
+        </div>
+      </div>
+    </footer>
+    <dialog
+      class="request-dialog"
+      id="request-dialog"
+      aria-labelledby="dialog-title"
+    >
+      <div class="dialog-scroll" id="dialog-scroll">
+        <div class="dialog-content">
+          <div class="dialog-top">
+            <span class="dialog-brand"
+              ><svg><use href="#aster" /></svg>Aster Care</span
+            ><button
+              class="dialog-close"
+              type="button"
+              aria-label="Close visit request"
+            >
+              <svg><use href="#close" /></svg>
+            </button>
+          </div>
+          <div class="dialog-body">
+            <p class="section-note">Your first step</p>
+            <h2 id="dialog-title">Let's plan your visit.</h2>
+            <p class="dialog-intro">
+              Start with the basics. This demo prepares a draft only.
+            </p>
+            <form id="request-form">
+              <div class="form-row">
+                <label
+                  >Your name<input
+                    name="name"
+                    autocomplete="name"
+                    required
+                    maxlength="100"
+                    placeholder="Alex Taylor" /></label
+                ><label
+                  >Email address<input
+                    name="email"
+                    type="email"
+                    autocomplete="email"
+                    required
+                    maxlength="180"
+                    placeholder="alex@example.com"
+                /></label>
+              </div>
+              <fieldset>
+                <legend>What would you like to ask about?</legend>
+                <div class="visit-options">
+                  <label
+                    ><input
+                      type="radio"
+                      name="visit"
+                      value="Everyday health"
+                      checked
+                    /><span>Everyday health</span></label
+                  ><label
+                    ><input
+                      type="radio"
+                      name="visit"
+                      value="Family care"
+                    /><span>Family care</span></label
+                  ><label
+                    ><input
+                      type="radio"
+                      name="visit"
+                      value="Routine check-in"
+                    /><span>Routine check-in</span></label
+                  >
+                </div>
+              </fieldset>
+              <fieldset>
+                <legend>When would you prefer to be contacted?</legend>
+                <div class="contact-options">
+                  <label
+                    ><input
+                      type="radio"
+                      name="preference"
+                      value="Morning"
+                      checked
+                    /><span>Morning</span></label
+                  ><label
+                    ><input
+                      type="radio"
+                      name="preference"
+                      value="Afternoon"
+                    /><span>Afternoon</span></label
+                  ><label
+                    ><input
+                      type="radio"
+                      name="preference"
+                      value="Either"
+                    /><span>Either is fine</span></label
+                  >
+                </div>
+              </fieldset>
+              <p class="form-note">
+                No medical details, please. Nothing here is sent or stored by
+                the website. Your preference is not a confirmed appointment.
+              </p>
+              <button class="button" type="submit">
+                Create my request draft
+                <svg class="arrow"><use href="#arrow" /></svg>
+              </button>
+            </form>
+            <div class="draft-result" id="draft-result" hidden role="status">
+              <h3>Your draft is ready.</h3>
+              <p>
+                Nothing has been sent and no appointment is booked. Copy this
+                draft for your own records; a live practice would need a real
+                contact or booking service.
+              </p>
+              <textarea
+                id="draft-text"
+                readonly
+                rows="7"
+                aria-label="Visit request draft"
+              ></textarea
+              ><button class="text-action" type="button" id="copy-request">
+                Copy request <svg class="arrow"><use href="#arrow" /></svg>
+              </button>
+              <p id="copy-status" role="status"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </dialog>
+  </body>
+</html>

@@ -6,6 +6,10 @@ An approachable family-practice landing page with a care directory, first-visit 
 
 [![Aster Care website preview](preview.webp)](https://store.usmankhairdin.com/aster-care/)
 
+## Practical guide
+
+[Customize a clinic website without a framework build](guides/customize-a-clinic-website.md) — a walkthrough of the actual files, content edits, launch checks and relevant template options.
+
 ## Get started
 
 Choose **Code > Download ZIP**, extract the repository, and open `index.html` in a modern browser. Keep `assets/` beside the HTML file. No framework install, API key or database is required.
